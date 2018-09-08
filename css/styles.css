@@ -1,0 +1,18 @@
+.card-module {
+  width: 100%;
+  box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+  transition: 400ms all ease-in-out;
+}
+.card-module:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
+}
+.card-col {
+  height: 100%;
+}
+div.container-inner {
+  padding-top: 15px;
+}
+div.col-inner {
+  padding-right: 0;
+  padding-left: 0;
+}
