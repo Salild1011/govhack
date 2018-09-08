@@ -17,8 +17,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+      function myMap() {
+          var mapOptions = {
+              center: new google.maps.LatLng(51.5, -0.12),
+              zoom: 10,
+              mapTypeId: google.maps.MapTypeId.HYBRID
+          }
+        var map = new google.maps.Map(document.getElementById("map123"), mapOptions);
+      }
+    </script>
   </head>
-  
   <body>
     <div class="container-fluid">
       <div class="row">
@@ -26,7 +35,7 @@
           <div class="card card-module">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div id="map123" style="height:400px;"></div>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
@@ -72,5 +81,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://unpkg.com/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <script type='text/javascript' src="js/main.js"></script>
   </body>
 </html>
