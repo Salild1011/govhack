@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>WidME</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>WidME</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
 
 
-    <link href="css/main.css" rel="stylesheet">    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<link href="css/main.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<<<<<<< HEAD
     <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
@@ -43,28 +44,59 @@
         </div>
         
        <div class="col-md-4">
+=======
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<a class="weatherwidget-io"
+		href="https://forecast7.com/en/n34d93138d60/adelaide/"
+		data-label_1="ADELAIDE" data-label_2="WEATHER" data-days="3"
+		data-theme="weather_one">ADELAIDE WEATHER</a>
+	<div class="nav1">
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary" onClick="setScreen(1)">Dashboard</button>
+			<button type="button" class="btn btn-primary" onClick="setScreen(2)">Feeds</button>
+			<button type="button" class="btn btn-primary" onClick="setScreen(3)">Planner</button>
+		</div>
+	</div>
+	<div class="container-fluid" id='1'>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card card-module">
+					<div class="card-body">
+						<h5 class="card-title">Current</h5>
+						<div id="map1" style="height: 400px;"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+>>>>>>> e308b2873914429b038d03360d789cbaac4a89a7
 				<div class="card card-module card-col">
 					<div class="card-body">
 						<h5 class="card-title">Strategic Plan</h5>
 						<div id="landing-page-image-note">
 							<p>
 								<a class="contact-card"> <span id="telTitle">People
-										Affected</span> <span id="tellNumber">014</span>
+										Affected</span> <span id="tellNumber">014</span>&#8203; 
 								</a>
+								<a href="#">Show...</a>
 							</p>
 						</div>
 						<div id="landing-page-image-note">
 							<p>
 								<a class="contact-card"> <span id="telTitle">Nearby
-										Available Hospital</span> <span id="tellNumber">03</span>
+										Available Hospital</span> <span id="tellNumber">03</span>&#8203;
 								</a>
+								<a href="#">Show...</a>
 							</p>
 						</div>
 						<div id="landing-page-image-note">
 							<p>
 								<a class="contact-card"> <span id="telTitle">Nearby
-										Fire stations</span> <span id="tellNumber">01</span>
+										Fire stations</span> <span id="tellNumber">01</span>&#8203;
 								</a>
+								<a href="#">Show...</a>
 							</p>
 						</div>
 						&#8203; For &#8203;life threatening, critical or serious
@@ -73,56 +105,62 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-md-8">
+				<div class="card card-module card-col">
+					<div class="card-body"></div>
+					<div class="card-body">
+						<h5 class="card-title">Notification</h5>
+						<ul class="list-unstyle ">
+							<li><a href="#">Update: Queensland Disaster Management
+									Arrangements Participant Guide</a></li>
+							<li><a href="#">Tropical Cyclone Nora and associated
+									flooding: 24-29 March 2018</a></li>
+							<li><a href="#">Eastern NSW Floods: 20 March 2018
+									onwards</a></li>
+							<li><a href="#">June update Queensland Emergency Risk
+									Management Framework Fact Sheet</a></li>
+							<li><a href="#">UPDATE: Prevention, Preparedness,
+									Response and Recovery Disaster Management Guideline Phase Two
+									Toolkit Development </a></li>
+							<li class="read-more"><a href="#" class="button">See
+									More</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-4">
-			<div class="card card-module card-col">
-				<div class="card-body"></div>
-				<div class="card-body">
-					<h5 class="card-title">Notification</h5>
-					<ul class="list-unstyle ">
-						<li><a href="#">Update: Queensland Disaster Management
-								Arrangements Participant Guide</a></li>
-						<li><a href="#">Tropical Cyclone Nora and associated
-								flooding: 24-29 March 2018</a></li>
-						<li><a href="#">Eastern NSW Floods: 20 March 2018 onwards</a></li>
-						<li><a href="#">June update Queensland Emergency Risk
-								Management Framework Fact Sheet</a></li>
-						<li><a href="#">UPDATE: Prevention, Preparedness,
-								Response and Recovery Disaster Management Guideline Phase Two
-								Toolkit Development </a></li>
-						<li class="read-more"><a href="#" class="button">See More</a></li>
-					</ul>
+
+	</div>
+
+<<<<<<< HEAD
+    <div class="container-fluid" id = '3'>
+    
+    </div>
+=======
+	<div class="container-fluid" id='2'>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-module marTB15">
+					<div class="card-body">
+						<h5 class="card-title">Fire Break out at Rundle Street</h5>
+					</div>
+				</div>
+				<div class="card card-module marTB15">
+					<div class="card-body">
+						<h5 class="card-title">Fire Break out at Rundle Street</h5>
+					</div>
+				</div>
+				<div class="card card-module marTB15">
+					<div class="card-body">
+						<h5 class="card-title">Fire Break out at Rundle Street</h5>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+>>>>>>> e308b2873914429b038d03360d789cbaac4a89a7
 
-    <div class="container-fluid" id = '2'>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card card-module marTB15">
-            <div class="card-body">
-                <h5 class="card-title">Fire Break out at Rundle Street</h5>
-            </div>
-          </div>
-          <div class="card card-module marTB15">
-            <div class="card-body">
-                <h5 class="card-title">Fire Break out at Rundle Street</h5>
-            </div>
-          </div>
-          <div class="card card-module marTB15">
-            <div class="card-body">
-                <h5 class="card-title">Fire Break out at Rundle Street</h5>
-            </div>
-          </div>          
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid" id = '3'>
-    
-    </div>
-
+	<div class="container-fluid" id='3'></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
