@@ -22,18 +22,101 @@
     <script type="text/javascript">
       function myMap() {
           var mapOptions = {
-              center: new google.maps.LatLng(51.5, -0.12),
-              zoom: 10,
-              mapTypeId: google.maps.MapTypeId.HYBRID
-          }
+              center: new google.maps.LatLng(-34.922851, 138.602320),
+              zoom: 12,
+              styles: [
+              {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+              {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+              {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+              {
+                featureType: 'administrative.locality',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+              },
+              {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+              },
+              {
+                featureType: 'poi.park',
+                elementType: 'geometry',
+                stylers: [{color: '#263c3f'}]
+              },
+              {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#6b9a76'}]
+              },
+              {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#38414e'}]
+              },
+              {
+                featureType: 'road',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#212a37'}]
+              },
+              {
+                featureType: 'road',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#746855'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#1f2835'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#f3d19c'}]
+              },
+              {
+                featureType: 'transit',
+                elementType: 'geometry',
+                stylers: [{color: '#2f3948'}]
+              },
+              {
+                featureType: 'transit.station',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#17263c'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#515c6d'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#17263c'}]
+              }
+            ],
+          mapTypeId: google.maps.MapTypeId.MAP
+        }
         var map = new google.maps.Map(document.getElementById("map1"), mapOptions);
         var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions);
       }
     </script>
   </head>
   <body>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/n34d93138d60/adelaide/" data-label_1="ADELAIDE" data-label_2="WEATHER" data-days="3" data-theme="weather_one" >ADELAIDE WEATHER</a>
     <div class="nav1">
-      Dashboard  |  Feeds  |  Planner
+      <span>Dashboard</span>
+      <span>Feeds</span>
+      <span>Planner</span>
     </div>
     <div class="container-fluid">
       <div class="row">
@@ -45,16 +128,11 @@
               <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
           </div>
-
-          <div class="container-fluid container-inner">
-            <div class="row">
-              <div class="card card-module container-fluid container-inner">
-                <div class="card-body">
-                  <h5 class="card-title">Possible</h5>
-                  <div id="map2" style="height:400px;"></div>
-                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-              </div>
+          <div class="card card-module">
+            <div class="card-body">
+              <h5 class="card-title">Possible</h5>
+              <div id="map2" style="height:400px;"></div>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
           </div>
         </div>
@@ -62,9 +140,19 @@
         <div class="col-md-4">
           <div class="card card-module card-col">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Emergency</h5>
+              <div id="landing-page-image-note">
+                <p>
+                  <a class="contact-card"> 
+                      <span id="telTitle">Emergency</span>
+                      <span id="tellNumber">000</span>&#8203; For &#8203;life threatening, critical or serious situations &#8203;&#8203;only.
+                  </a>
+                </p>
+              </div>
+              <p class="card-text"></p>
+              <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+              </script>  
             </div>
           </div>
         </div>
