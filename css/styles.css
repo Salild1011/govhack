@@ -42,3 +42,4 @@ div.col-inner {
   /* "transparent" only works here because == rgba(0,0,0,0) */
   background-image: linear-gradient(to bottom, transparent, black);
 }
+
