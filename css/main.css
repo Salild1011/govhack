@@ -75,3 +75,11 @@
 .marTB15{
     margin: 15px 0px;
 }
+.invisible-div{
+    float: right;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    cursor: pointer;
+    color: #fff;
+}

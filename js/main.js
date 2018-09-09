@@ -1,38 +1,68 @@
+var map;
+var mk1;
 function myMap() {
   var mapOptions = {
-      center: new google.maps.LatLng(-34.922851, 138.602320),
-      zoom: 12,
+      center: new google.maps.LatLng(-34.907411, 138.708958),
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.MAP
   }
-  var map = new google.maps.Map(document.getElementById("map1"), mapOptions);
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(-34.929726, 138.596234),
+  map = new google.maps.Map(document.getElementById("map1"), mapOptions);
+  mk1 = new google.maps.Marker({
+    position: new google.maps.LatLng(-34.907411, 138.708958),
     title:"Fire Breakout at Residential Colony"
   });
-  marker.setMap(map);
+  mk1.setMap(map);
 }
-var heatmapData = [
-  new google.maps.LatLng(37.782, -122.447),
-  new google.maps.LatLng(37.782, -122.445),
-  new google.maps.LatLng(37.782, -122.443),
-  new google.maps.LatLng(37.782, -122.441),
-  new google.maps.LatLng(37.782, -122.439),
-  new google.maps.LatLng(37.782, -122.437),
-  new google.maps.LatLng(37.782, -122.435),
-  new google.maps.LatLng(37.785, -122.447),
-  new google.maps.LatLng(37.785, -122.445),
-  new google.maps.LatLng(37.785, -122.443),
-  new google.maps.LatLng(37.785, -122.441),
-  new google.maps.LatLng(37.785, -122.439),
-  new google.maps.LatLng(37.785, -122.437),
-  new google.maps.LatLng(37.785, -122.435)
-];
+var count = 1;
+function setMapMarkers () {
+  if (count == 1) {
+    var mk2 = new google.maps.Marker({
+      position: new google.maps.LatLng(-34.899933, 138.696279),
+      title:"Fire Breakout at Residential Colony"
+    });
+    mk2.setMap(map);
+    var mk3 = new google.maps.Marker({
+      position: new google.maps.LatLng(-34.905819, 138.701588),
+      title:"Fire Breakout at Residential Colony"
+    });
+    mk3.setMap(map);
 
-var heatmap = new google.maps.visualization.HeatmapLayer({
-  data: heatmapData
-});
+    var lineSymbol = {
+      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+    };
 
-heatmap.setMap(map);
+    // Create the polyline and add the symbol via the 'icons' property.
+    var line = new google.maps.Polyline({
+      path: [{lat: -34.908200, lng: 138.715878}, {lat: -34.902681, lng: 138.694163}],
+      icons: [{
+        icon: lineSymbol,
+        offset: '100%'
+      }],
+      map: map
+    });
+
+    var line2 = new google.maps.Polyline({
+      path: [{lat: -34.902323, lng: 138.712358}, {lat: -34.900098, lng: 138.701302}],
+      icons: [{
+        icon: lineSymbol,
+        offset: '100%'
+      }],
+      map: map
+    });
+  } else if (count == 2) {
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(-34.929726, 138.596234),
+      icon: {
+        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+        scale: 7
+      },
+      draggable: true,
+      map: map
+    });
+  }
+}
+
+
 
 
 function setScreen(param) {
