@@ -49,6 +49,7 @@ function setMapMarkers () {
       }],
       map: map
     });
+  $('#strategicPlan').removeClass('dn');
   } else if (count == 2) {
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(-34.929726, 138.596234),
