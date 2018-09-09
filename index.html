@@ -19,120 +19,24 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-      function myMap() {
-          var mapOptions = {
-              center: new google.maps.LatLng(-34.922851, 138.602320),
-              zoom: 12,
-              styles: [
-              {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-              {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-              {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-              {
-                featureType: 'administrative.locality',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#d59563'}]
-              },
-              {
-                featureType: 'poi',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#d59563'}]
-              },
-              {
-                featureType: 'poi.park',
-                elementType: 'geometry',
-                stylers: [{color: '#263c3f'}]
-              },
-              {
-                featureType: 'poi.park',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#6b9a76'}]
-              },
-              {
-                featureType: 'road',
-                elementType: 'geometry',
-                stylers: [{color: '#38414e'}]
-              },
-              {
-                featureType: 'road',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#212a37'}]
-              },
-              {
-                featureType: 'road',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#9ca5b3'}]
-              },
-              {
-                featureType: 'road.highway',
-                elementType: 'geometry',
-                stylers: [{color: '#746855'}]
-              },
-              {
-                featureType: 'road.highway',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#1f2835'}]
-              },
-              {
-                featureType: 'road.highway',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#f3d19c'}]
-              },
-              {
-                featureType: 'transit',
-                elementType: 'geometry',
-                stylers: [{color: '#2f3948'}]
-              },
-              {
-                featureType: 'transit.station',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#d59563'}]
-              },
-              {
-                featureType: 'water',
-                elementType: 'geometry',
-                stylers: [{color: '#17263c'}]
-              },
-              {
-                featureType: 'water',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#515c6d'}]
-              },
-              {
-                featureType: 'water',
-                elementType: 'labels.text.stroke',
-                stylers: [{color: '#17263c'}]
-              }
-            ],
-          mapTypeId: google.maps.MapTypeId.MAP
-        }
-        var map = new google.maps.Map(document.getElementById("map1"), mapOptions);
-        var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions);
-      }
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <a class="weatherwidget-io" href="https://forecast7.com/en/n34d93138d60/adelaide/" data-label_1="ADELAIDE" data-label_2="WEATHER" data-days="3" data-theme="weather_one" >ADELAIDE WEATHER</a>
     <div class="nav1">
-      <span>Dashboard</span>
-      <span>Feeds</span>
-      <span>Planner</span>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" onClick="changeScreen(1)">Dashboard</button>
+        <button type="button" class="btn btn-primary" onClick="changeScreen(2)">Feeds</button>
+        <button type="button" class="btn btn-primary" onClick="changeScreen(3)">Planner</button>
+      </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id = '1'>
       <div class="row">
         <div class="col-md-8">
           <div class="card card-module">
             <div class="card-body">
               <h5 class="card-title">Current</h5>
               <div id="map1" style="height:400px;"></div>
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-          </div>
-          <div class="card card-module">
-            <div class="card-body">
-              <h5 class="card-title">Possible</h5>
-              <div id="map2" style="height:400px;"></div>
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
           </div>
         </div>
@@ -149,15 +53,23 @@
                   </a>
                 </p>
               </div>
-              <p class="card-text"></p>
-              <script>
-              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-              </script>  
+              <p class="card-text"></p> 
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="container-fluid" id = '2'>
+    
+    
+    </div>
+
+    <div class="container-fluid" id = '3'>
+    
+    
+    </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -165,6 +77,8 @@
     <script src="https://unpkg.com/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-    <script type='text/javascript' src="js/main.js"></script>
+    <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script> 
   </body>
 </html>

@@ -2,14 +2,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 25%;
+    width: fit-content;
     background: #4082c4;
     margin: 5px auto;
-    padding: 5px;
     border-radius: 4px;
     cursor: pointer;
 }
-
+.nav1 .btn-group .btn-primary:active, .nav1 .btn-group .btn-primary:focus{
+    box-shadow: none!important;
+    background: #4082c4;
+}
 #landing-page-image-note {
 	min-height:40px;
 }
@@ -48,4 +50,25 @@
 	margin-right:auto;
 	padding:15px;
 	border:1px solid #ddd;
+}
+
+#landing-page-image-note .contact-card {
+	text-align: center;
+    text-decoration: none;
+    display: block;
+    color: #333;
+    background-color:#fff;
+}
+#landing-page-image-note #telTitle{
+	font-size: 2.2em;
+    clear: right;
+    display: block;
+    text-align: center;
+    font-weight: normal;
+}
+#landing-page-image-note #tellNumber {
+	font-size: 2.2em;
+    display: block;
+    text-align: center;
+    font-weight: bold;
 }
