@@ -86,3 +86,12 @@
 .dn {
     display: none!important;
 }
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+}
